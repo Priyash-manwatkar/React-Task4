@@ -83,19 +83,24 @@ import { people } from '../data';
 function  Priyash2()
 {
     return (
-    
+    <div className='flex flex-wrap justify-center bg-green-500'>
+        {
         people.map((value,index)=>{
             const {id,name,email,age}=value;
             return (
-                <div key={index}>
+                <div key={index} className='justify-center bg-blue-500  p-4  border-4 border-black
+                 rounded-lg m-4 text-center text-3xl  w-128 h-64'>
+                    <div className='flex flex-col align-center '>
                     <h1>{id}</h1>
                     <h2>{name}</h2>
                     <h3>{email}</h3>
                     <h4>{age}</h4>
+                    </div>
                 </div>
             )
 
-        })
+        })}
+        </div>
     
     )
 }
